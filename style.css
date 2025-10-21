@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 20% 30%, #1a1a1a 0%, #0d0d0d 100%), 
+              linear-gradient(120deg, #121212, #1c1c1c);
+  color: #fff;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 380px;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #fff;
+}
+
+p {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007aff;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(0,122,255,0.2);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #007aff;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #0066d6;
+  transform: scale(1.01);
+}
+
+.msg {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.success {
+  color: #4ee44e;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.loader {
+  border: 3px solid rgba(255,255,255,0.2);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
